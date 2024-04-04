@@ -20,11 +20,21 @@ Route::get('/lecciones', function () {
     return view('lecciones.index');
 });
 
+Route::get('/progreso/fijar-precios', function () {
+    return view('lecciones.progreso.index');
+});
+
+Route::get('/lecciones/fijar-precios', function () {
+    return view('lecciones.fijar-precios.first');
+});
+
 Route::get('/herramientas/calculadoras/IVA', [CalBasicaController::class, 'indexIVA']);
 
 Route::get('/herramientas/calculadoras/basica', [CalBasicaController::class, 'index']);
 
 Route::get('/herramientas/calculadoras/avanzada', [CalBasicaController::class, 'indexA']);
+
+Route::get('/herramientas/calculadoras/PuntoEquilibrio', [CalBasicaController::class, 'indexPE']);
 
 
 

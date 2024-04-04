@@ -1,3 +1,9 @@
+<!--
+    Título: Calculadora de Costos
+    Descripción: Esta página web implementa una calculadora de costos que permite calcular el precio final
+    de un producto basado en los costos totales y el porcentaje de ganancia deseado.
+-->
+
 @extends ('layouts.admin')
 @section ('contenido')
 <!DOCTYPE html>
@@ -7,54 +13,42 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="{{asset('css/calColors.css')}}">
     <link rel="stylesheet" href="{{asset('css/calculadoraBasica.css')}}">
+    <link rel="stylesheet" href="{{asset('css/cards.css')}}">
+    <link rel="stylesheet" href="{{asset('css/cardsCal.css')}}">
   </head>
+
   <body>
-    <div class="calculadora-basica-de-costos">
-      <header>
-        <h1>Calculadora de Costos</h1>
-      </header>
-      <section class="calculate-button">
-        <div class="reset-button">
-          <div class="costs-total-rect">
-            <div class="precio-final-rect">
-              <div class="final-price-summary">
-                <div class="final-price-summary-inner">
-                  <div class="costos-total-parent">
-                    <div class="costos-total">Costos total</div>
-                    <input type="number" name="costos_total" value="0" id="costos_total">
-                  </div>
-                </div>
-              </div>
+      <div>
+    <h1 style="text-align: center;">Calculadora de Costos</h1>
+    <div class="calculator">
+        <div class="card">
+            <div class="campo">
+                <label style="font-size: 18px; font-weight: 500;" for="costos_total">Costos total:</label>
+                <input style="font-size: 18px; font-weight: 500;" type="number" id="costos_total" name="costos_total" placeholder="$ Costo">
             </div>
-            <div class="porcentaje-de-ganancia-deseado-parent">
-              <div class="porcentaje-de-ganancia-deseado-parent">Porcentaje de ganancia deseado %</div>
-              <input type="number" name="ganancia" value="0" id="ganancia">
-              <div class="rectangle-wrapper"></div>
+            <div class="campo">
+                <label style="font-size: 18px; font-weight: 500;" for="ganancia">Porcentaje de ganancia deseado %:</label>
+                <input  style="font-size: 18px; font-weight: 500;" type="number" id="ganancia" name="ganancia" placeholder="Margen %">
             </div>
-          </div>
-          <div class="frame-div">
-                  <div class="precio-final-wrapper">
-                    <div class="precio-final" id="precio_final">Precio final: </div>
-                  </div>
-                </div>
-          <div class="reset-button-inner">
-            <div class="frame-parent1">
-            <button onclick="Calcular()" class="rectangle-group">
-                <div class="frame-child1"></div>
-                <div class="calcular">Calcular</div>
-              </button>
-            <button onclick="Limpiar()" class="rectangle-container">
-                <div class="frame-child2"></div>
-                <div class="limpiar">Limpiar</div>
-              </button>              
+            <div class="resultado" id="resultado">
+                <span style="font-size: 18px; font-weight: 500;" id="precio_final"></span>
             </div>
-          </div>
+            <div class="acciones">
+                <button style="font-size: 18px; font-weight: 500;" onclick="Calcular()" class="boton calcular">Calcular</button>
+                <button style="font-size: 18px; font-weight: 500;" onclick="Limpiar()" class="boton limpiar">Limpiar</button>
+            </div>
         </div>
-      </section>
     </div>
-  </body>
+</div>
 
 <script>
+  /**
+   * Función Calcular
+   * Descripción: Calcula el precio final de un producto basado en los costos totales
+   *              y el porcentaje de ganancia deseado.
+   * Parámetros: Ninguno
+   * Retorno: Ninguno
+   */
     function Calcular() {
       var costos_total = parseFloat(document.getElementById('costos_total').value);
       var ganancia = parseFloat(document.getElementById('ganancia').value);
@@ -67,11 +61,17 @@
       var precio_final = costos_total * (1 + ganancia / 100);
       document.getElementById('precio_final').innerHTML = "Precio final: " + precio_final.toFixed(2);
     }
-
+    /** 
+     * Función Limpiar
+     * Descripción: Limpia los campos de entrada y el resultado.
+     * Parámetros: Ninguno
+     * Retorno: Ninguno
+     */
     function Limpiar() {
-      document.getElementById('costos_total').value = '0';
-      document.getElementById('ganancia').value = '0';
-      document.getElementById('precio_final').innerHTML = '';
+      document.getElementById('costos_total').value = '';
+      document.getElementById('ganancia').value = '';
+      document.getElementById('precio_final').innerHTML = 'Precio final';
     }
   </script>
+  </body>
 @endsection

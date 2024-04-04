@@ -30,4 +30,9 @@ class CalBasicaController extends Controller
         return view('herramientas.Calculadoras.IVA.index');
     }
 
+    public function indexPE()
+    {
+        return view('herramientas.Calculadoras.PE.index');
+    }
+
 }
