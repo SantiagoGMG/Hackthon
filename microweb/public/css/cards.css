@@ -1,0 +1,42 @@
+#lecciones 
+{
+    display: flex;
+}
+
+.card{
+    background-color: #fff;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.imagen {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+a{
+    style: none;
+}
+    
+.boton {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #24549C;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .boton:hover {
+        background-color: #0056b3;
+        cursor: pointer;
+    }
+
+#center {
+text-align: center;
+display: block;
+}

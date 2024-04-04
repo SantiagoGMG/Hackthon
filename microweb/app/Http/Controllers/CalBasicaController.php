@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Input; #para que el usuario agregue imagenes
+use Illuminate\Support\Facades\Input;
 use DB;
 
 class CalBasicaController extends Controller
@@ -20,5 +20,14 @@ class CalBasicaController extends Controller
         return view('herramientas.Calculadoras.Basica.index');
     }
 
-    
+    public function indexA()
+    {
+        return view('herramientas.Calculadoras.Avanzada.index');
+    }
+
+    public function indexIVA()
+    {
+        return view('herramientas.Calculadoras.IVA.index');
+    }
+
 }

@@ -1,9 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
-
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request; // Importa la clase Request
 
 class HerramientasController extends Controller
 {
@@ -11,7 +10,7 @@ class HerramientasController extends Controller
     
     public function index()
     {
-     return view('herramientas.index');
+        return view('herramientas.conjuntos-herramientas.index');
     }
     
     public function create()

@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-  <!--
-  casita = image-23@2x.png
-  lecciones = vector.svg
-  herramientas = image-24@2x.png
-  tienda = storesolid-6.svg
-  
-  -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <!-- Aqui puedes agregar tus estilos CSS --> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/global.css')}}">
     <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-    
-</head> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-z1K2vQlGv47ZlZr+z1aBphPw1aZvlp/8MtFMOl/rM74nxhoQxtmX6Is16DRDYsDjLe7Hb8F8snwTSd/nO1fxRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #fce574;
+        }
 
-    <body>
-    <div class="inicio-parent">
-          <main class="inicio">
-            <div class="inicio-child"></div>
-            <header class="rectangle-parent">
-              <div class="frame-child"></div>
-              <div class="frame-parent">
-                <div class="frame-wrapper">
-                  <a href="/inicio" class="herramientas-image-parent">
-                    <div class="herramientas-image">
-                      <div class="inicio1">Inicio</div>
-                    </div>
-                    <img
-                      class="image-7-icon"
-                      loading="lazy"
-                      alt=""
-                      src="{{ asset('img/image-23@2x.png') }}"
-                    />
-                  </a>
-                </div>
-                <div class="frame-item"></div>
-              </div>
-              <div class="frame-container">
-                <div class="lecciones-herramientas-parent">
-                  <a href="/lecciones" class="lecciones-herramientas">
-                    <div class="lecciones-wrapper">
-                      <div class="lecciones">Lecciones</div>
-                    </div>
-                    <img
-                      class="logo-image-icon"
-                      loading="lazy"
-                      alt=""
-                      src="./img/vector.svg"
-                    />
-                  </a>
-                  <a href="/herramientas" class="lecciones-herramientas1">
-                    <div class="herramientas-wrapper">
-                      <div class="herramientas">Herramientas</div>
-                    </div>
-                    <img
-                      class="image-8-icon"
-                      loading="lazy"
-                      alt=""
-                      src="./img/image-24@2x.png"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="frame-div">
-                <div class="frame-group">
-                  <a href="/Tienda" class="tienda-wrapper">
-                    <div class="tienda">Tienda</div>
-                  </a>
-                  <img
-                    class="store-solid-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./img/storesolid-6.svg"
-                  />
-                </div>
-              </div>
-              <div class="profile-image">
-                <div class="frame-parent1">
-                  <a href="/perfil" class="perfil-wrap  per">
-                    <div class="perfil">Perfil</div>
-                  </a>
-                  <img
-                    class="image-15-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./img/image-25@2x.png"
-                  />
-                </div>
-              </div>
-            </header> 
-          </main>
+        header {
+            background-color: #fce574;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 10px;
+        }
+
+        .menu-item {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .content-wrapper {
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .menu-container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .menu-item {
+                flex-direction: row;
+                margin: 0;
+            }
+
+            .menu-item:first-child {
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <a href="/inicio" class="menu-item">
+                <img src="https://th.bing.com/th/id/R.19c465a4d4cc35fd3a18e0f7977a482e?rik=dHEo9RQG3DdK5Q&pid=ImgRaw&r=0" alt="Inicio">
+                <div>Inicio</div>
+            </a>
+            <a href="/lecciones" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/10690/10690924.png" alt="Lecciones">
+                <div>Lecciones</div>
+            </a>
+            <a href="/herramientas" class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.NnrfevyixXfBRVWn3zij0gHaHa?rs=1&pid=ImgDetMain" alt="Herramientas">
+                <div>Herramientas</div>
+            </a>
+            <a href="/Tienda" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/726/726569.png" alt="Tienda">
+                <div>Tienda</div>
+            </a>
+            <a href="/perfil" class="menu-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/6565/6565343.png" alt="Perfil">
+                <div>Perfil</div>
+            </a>
         </div>
-        @yield('contenido')
-    </body>
-    
+    </header>
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--Contenido-->
+                            @yield('contenido')
+                            <!--Fin Contenido-->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+    <script src="{{ asset('js/linea.js') }}"></script>
+</body>
 </html>
