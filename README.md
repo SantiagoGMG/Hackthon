@@ -20,5 +20,6 @@ Al estar en el servidor, le redireccionará a la parte de inicio donde se podrá
 - Herramientas
 - Tienda
 - Perfil
+  
 El apartado de lecciones contiene cursos relevantes para los microempresarios. Puede seleccionar el primero, que es "Fijar precios para ganar más", donde le mandará a unos enlaces de círculos. Presione el círculo uno para poder ejecutar el prototipo de la enseñanza dinámica en la plataforma Coppel Emprende.
 El apartado de herramientas cuenta con programas muy sencillos de contabilidad para una empresa, donde mantendremos bloqueadas estas herramientas hasta que el usuario logre completar el curso y pueda aplicar lo aprendido con nuestras herramientas. El apartado de tienda cuenta con productos tecnológicos, para que el microempresario no solo obtenga más educación, sino también productos tecnológicos que le facilitarán muchos procesos en su comercio. El apartado de perfil que se muestra es un ejemplo de cómo estaríamos conectados en la plataforma Coppel Emprende. Mostrando que nosotros queremos ser un complemento a la plataforma Coppel Emprende.
