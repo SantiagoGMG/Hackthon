@@ -13,8 +13,10 @@ Este proyecto busca solucionar la problemática que plantea Coppel. Buscamos ser
 - Ahora tendrá que instalar composer en el proyecto para poder generar la carpeta vendor.
 - Abra una terminal en su editor de código y posicionece específicamente en la ruta **rutaPersonal\Hackthon\microweb**.
 - Ubicado específicamente en microweb deberá ejecutar el siguiente comando **composer install**.
+
 Una vez instaladas todas las dependencias para poder construir un proyecto en Laravel, podrá acceder al servidor ejecutando el comando **php artisan serve**, y le aparecerá un texto similar a este: "Server running on" el cual contiene un enlace que puede copiar y pegar en su navegador o simplemente presionar "ctrl + click" en ese enlace.
 Al estar en el servidor, le redireccionará a la parte de inicio donde se podrá ver un ranking de usuarios global que mostrará al usuario con más llaves acumuladas y el progreso de cada uno de los cursos ofrecidos por Coppel Emprende. En el encabezado contamos con los apartados:
+
 - Inicio
 - Lecciones
 - Herramientas
