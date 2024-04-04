@@ -5,7 +5,7 @@
 
     #line1 {
         position: relative;
-        left: 720px;
+        left: 635px;
         top: 85px;
         transform: rotate(-18deg);
         font-size: 25px;
@@ -13,7 +13,7 @@
 
     #line2 {
         position: relative;
-        left: 650px;
+        left: 550px;
         top: -35px;
         transform: rotate(18deg);
         font-size: 25px;
@@ -21,7 +21,7 @@
 
     #line3 {
         position: relative;
-        left: 650px;
+        left: 550px;
         top: -145px;
         transform: rotate(-18deg);
         font-size: 25px;
@@ -30,7 +30,7 @@
 
     #line4 {
         position: relative;
-        left: 680px;
+        left: 570px;
         top: -270px;
         transform: rotate(35deg);
         font-size: 25px;
